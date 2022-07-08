@@ -27,7 +27,7 @@
   width: 300px;
   padding: 0 40px;
   margin-right: 40px;
-  background-image: url(/images/sound.png);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/831/original/sound.png?1657298218);
   background-position: 90%;
   background-repeat: no-repeat;
   background-size: 40px;
@@ -47,7 +47,7 @@
   box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
   border: 3px solid #a3aab0;
   background-color: #b0a09b5e;
-  background-image: url(/images/search.png);
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/830/original/search.png?1657298154);
   background-size: 50%;
   height: 50px;
   width: 70px;
