@@ -1,0 +1,219 @@
+.content {
+  background-image: url(/images/fon11\ —\ копия.png);
+  padding: 30px 50px 0 50px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  opacity: 0.9;
+  margin-top: 5px;
+  width: 800px;
+  border: 3px solid rgb(41, 40, 40);
+}
+.content h1 {
+  text-shadow: 1px 1px #bbada9;
+}
+.currentweatherlabel {
+  font-style: italic;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  background-color: #b0a09b5e;
+  border: 3px solid #a3aab0;
+  border-radius: 26px;
+  height: 50px;
+  width: 300px;
+  padding: 0 40px;
+  margin-right: 40px;
+  background-image: url(/images/sound.png);
+  background-position: 90%;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+}
+.search::placeholder {
+  font-style: italic;
+  font-size: 22px;
+  color: rgb(41, 40, 40);
+}
+.form1 {
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.submit {
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+  border: 3px solid #a3aab0;
+  background-color: #b0a09b5e;
+  background-image: url(/images/search.png);
+  background-size: 50%;
+  height: 50px;
+  width: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 26px;
+}
+
+.citydate {
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+  border: 3px solid none;
+  border-radius: 30px;
+  background-color: #b9b9b93a;
+  padding: 15px 20px 20px 20px;
+}
+.weatherdate2colmn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.citydate h2 {
+  color: #c0c4c7;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px -1px black;
+}
+.currentweather {
+  width: 85%;
+  margin-left: 10px;
+}
+.citydate h1 {
+  font-size: 70px;
+  text-align: center;
+}
+.citydate p {
+  text-align: center;
+  font-size: 26px;
+}
+.lowhigh {
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+  margin-top: 20px;
+  border-radius: 26px;
+  border: 3px solid #a3aab0;
+}
+.lowhigh .col-6 {
+  font-size: 22px;
+  text-align: center;
+}
+.weathermarkers {
+  text-align: center;
+  padding-top: 30px;
+}
+.weathermarkers p {
+  font-size: 26px;
+}
+.vl {
+  border-left: 2px solid rgb(41, 40, 40);
+  position: absolute;
+  height: 50px;
+}
+.vldiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.value {
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+  border: 3px solid none;
+  border-radius: 30px;
+  background-color: #b9b9b93a;
+  font-size: 18px;
+  padding: 3px 0 3px 0;
+}
+hr {
+  border: none;
+  background-color: rgb(41, 40, 40);
+  color: rgb(41, 40, 40);
+  height: 2px;
+}
+.weektemp {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+.weektemp p {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 2px solid #a3aab0;
+}
+.weektemp .col1 {
+  box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
+  padding: 10px 0 0 0;
+  border: 3px solid none;
+  border-radius: 3px;
+  background-color: #b9b9b93a;
+  font-size: 18px;
+  width: 14%;
+}
+.col1 img {
+  margin: 15px 0 15px 0;
+  height: 50px;
+  width: 70%;
+}
+.weektemp h2 {
+  text-shadow: 1px 1px #bbada9;
+}
+#time {
+  padding-top: 0;
+}
+#day {
+  margin-bottom: 0;
+}
+.degrees {
+  display: flex;
+  justify-content: center;
+}
+
+.CF {
+  display: flex;
+}
+.CF p {
+  color: #d3d3d3be;
+  padding-left: 10px;
+  background-color: none;
+  padding-top: 10px;
+  font-weight: bold;
+  text-shadow: 3px -1px rgb(55, 55, 55);
+}
+#CFline {
+  color: rgb(41, 40, 40);
+  text-shadow: none;
+}
+#celcium:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#farenheit {
+  padding-left: 6px;
+}
+#farenheit:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.active {
+  text-decoration: underline;
+}
+#min_temp {
+  padding-left: 5px;
+}
+#max_temp {
+  padding-left: 5px;
+}
+#pHum {
+  margin-left: -10px;
+}
+.currentweatherlabel {
+  margin-left: 10px;
+}
+#current {
+  margin-left: 20px;
+  background-image: none;
+  padding-left: 5px;
+  color: rgb(41, 40, 40);
+  cursor: pointer;
+}
