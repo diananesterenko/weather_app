@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/9726fcd8ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <div class="content">
+        <h1>Weather Forecast</h1>
+
+        <form action="" class="form1" id="forminput">
+          <input id="search" class="search" type="search" placeholder="Search" />
+          <input type="submit" class="submit" value="   " />
+          <input type="" class="submit" id="current" value="Current" />
+        </form>
+        <div class="citydate">
+          <h2 id="city">Madrid</h2>
+
+          <div class="row">
+            <div class="col-5">
+              <div class="row"><img src="/images/sun3.png" alt="sun" class="currentweather" /></div>
+              <div class="row"><p class="currentweatherlabel">Sunny</p></div>
+              
+            </div>
+            <div class="col-2"></div>
+            <div class="col-5 weatherdate2colmn">
+              <div class="row">     
+                <div class="degrees"><h1 id="currentDegree">21</h1><div class="CF"><p id="celcium">°C</p><p id="CFline">/</p ><p id="farenheit">°F</p></div></div>
+              <p id="day">Monday</p>
+            <p id="time">16:00</p></div>
+         
+              <div class="lowhigh">
+                <div class="row">
+                  <div class="col-6"> <span id="min_temp"> 7</span>
+                    °<br><span>Low</span>
+                  </div>
+                  <div class="col-6"> <span id="max_temp">27</span> °<br><span>High</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weathermarkers row">
+          <div class="col-2 "><p>Wind</p><div class="value" id="speed">3km/h</div></div>
+          <div class="col-1 vldiv"><div class="vl"></div></div>   
+          <div class="col-2"><p id="pHum">Humidity</p><div class="value" id="humidity">0%</div></div>
+          <div class="col-1 vldiv"><div class="vl"></div></div>
+            <div class="col-1 vldiv"><div class="vl"></div></div>
+          <div class="col-2 "><p>Sunrise</p><div class="value" id="sunrise">05:27</div></div>
+          <div class="col-1 vldiv"><div class="vl"></div></div>
+          <div class="col-2"><p>Sunset</p><div class="value" id="sunset">21:32</div></div>
+       
+        </div>
+      <hr>
+       <div class="weektemp">
+     <div class="col1"> <p>Tue</p> <img src="/images/sun3.png" alt="suncloud"><h2>25°</h2></div>
+     <div class="col1"> <p>Wed</p> <img src="/images/rain (2).png" alt="rain"><h2>17°</h2></div>
+     <div class="col1"> <p>Thur</p> <img src="/images/suncloudly.png" alt="suncloud"><h2>21°</h2></div>
+     <div class="col1"> <p>Fri</p><img src="/images/suncloudly.png" alt="suncloud"><h2>21°</h2></div>
+     <div class="col1"> <p>Sat</p><img src="/images/suncloudly.png" alt="suncloud"><h2>21°</h2></div>
+     <div class="col1"> <p>Sun</p><img src="/images/lightning.png" alt="suncloud"><h2>14°</h2></div>
+       </div>
+
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
