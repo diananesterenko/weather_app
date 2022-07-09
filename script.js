@@ -39,7 +39,7 @@ function showtemp(response) {
   let humidity = Math.round(response.data.main.humidity);
   let sunrise = Math.round(response.data.sys.sunrise);
   let sunset = Math.round(response.data.sys.sunset);
-
+  celciusTemp = response.data.main.temp;
   console.log(response.data);
   let currTemp = document.querySelector("#currentDegree");
   let minTemp = document.querySelector("#min_temp");
@@ -75,7 +75,7 @@ function showcity(event) {
   axios.get(apiUrl).then(showtemp);
 }
 form_input.addEventListener("submit", showcity);
-
+let celciusTemp = null;
 function showPosition(position) {
   let apiKey = "48c14604b04302ce48bd992c15188679";
   let latitude = position.coords.latitude;
@@ -101,7 +101,7 @@ function showfarenh() {
   celciy.classList.remove("active");
   farinh.classList.add("active");
 
-  let tmp = currentdegree.innerHTML * 1.8 + 32;
+  let tmp = response.data.main.temp * 1.8 + 32;
   tmp = Math.round(tmp);
   currentdegree.innerHTML = tmp;
 }
