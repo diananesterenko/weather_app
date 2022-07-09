@@ -244,6 +244,9 @@ hr {
 }
 @media (max-width: 570px) {
   .search {
-    max-width: 300px;
+    width: 300px;
+  }
+  #current {
+    width: 70px;
   }
 }
