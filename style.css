@@ -231,4 +231,10 @@ hr {
   .content {
     width: 100%;
   }
+  #pHum {
+    margin-left: 0;
+  }
+  .weathermarkers p {
+    font-size: 22px;
+  }
 }
