@@ -39,6 +39,7 @@ function showtemp(response) {
   let humidity = Math.round(response.data.main.humidity);
   let sunrise = Math.round(response.data.sys.sunrise);
   let sunset = Math.round(response.data.sys.sunset);
+
   celciusTemp = response.data.main.temp;
   console.log(response.data);
   let currTemp = document.querySelector("#currentDegree");
@@ -50,7 +51,7 @@ function showtemp(response) {
   let currSunrise = document.querySelector("#sunrise");
   let currSunset = document.querySelector("#sunset");
   let current_city = document.querySelector("#city");
-
+  let mainIcon = document.querySelector("#main_icon");
   current_city.innerHTML = response.data.name;
   currTemp.innerHTML = temp;
   minTemp.innerHTML = tempMin;
@@ -60,6 +61,10 @@ function showtemp(response) {
   currHumidity.innerHTML = `${humidity} %`;
   currSunrise.innerHTML = timeConverter(sunrise);
   currSunset.innerHTML = timeConverter(sunset);
+  mainIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showcity(event) {
