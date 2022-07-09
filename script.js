@@ -96,14 +96,14 @@ let farinh = document.querySelector("#farenheit");
 let celciy = document.querySelector("#celcium");
 
 celciy.classList.add("active");
-function showfarenh() {
+function showfarenh(event) {
+  event.preventDefault();
   let currentdegree = document.querySelector("#currentDegree");
   celciy.classList.remove("active");
   farinh.classList.add("active");
 
   let tmp = response.data.main.temp * 1.8 + 32;
-  tmp = Math.round(tmp);
-  currentdegree.innerHTML = tmp;
+  currentdegree.innerHTML = Math.round(tmp);
 }
 function showcelc() {
   let currentdegree = document.querySelector("#currentDegree");
