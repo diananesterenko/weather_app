@@ -226,6 +226,9 @@ hr {
   .content {
     width: 90%;
   }
+  #pHum {
+    margin-left: -5px;
+  }
 }
 @media (max-width: 764px) {
   .content {
@@ -233,7 +236,7 @@ hr {
     padding: 20px 20px 10px 20px;
   }
   #pHum {
-    margin-left: 0;
+    margin-left: -10px;
   }
   .weathermarkers p {
     font-size: 22px;
