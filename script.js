@@ -102,7 +102,7 @@ function showfarenh(event) {
   celciy.classList.remove("active");
   farinh.classList.add("active");
 
-  let tmp = response.data.main.temp * 1.8 + 32;
+  let tmp = celciusTemp * 1.8 + 32;
   currentdegree.innerHTML = Math.round(tmp);
 }
 function showcelc() {
