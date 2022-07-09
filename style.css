@@ -230,7 +230,7 @@ hr {
     margin-left: -5px;
   }
 }
-@media (max-width: 764px) {
+@media (max-width: 768px) {
   .content {
     width: 100%;
     padding: 20px 20px 10px 20px;
@@ -239,6 +239,11 @@ hr {
     margin-left: -10px;
   }
   .weathermarkers p {
-    font-size: 22px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 570px) {
+  .search {
+    max-width: 300px;
   }
 }
