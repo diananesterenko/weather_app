@@ -110,7 +110,7 @@ function showcelc() {
   farinh.classList.remove("active");
   celciy.classList.add("active");
 
-  currentdegree.innerHTML = celciusTemp;
+  currentdegree.innerHTML = Math.round(celciusTemp);
 }
 farinh.addEventListener("click", showfarenh);
 celciy.addEventListener("click", showcelc);
