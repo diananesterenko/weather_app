@@ -222,8 +222,3 @@ hr {
   margin-left: 100px;
   font-size: 22px;
 }
-.iconMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
