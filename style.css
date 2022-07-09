@@ -244,6 +244,6 @@ hr {
 }
 @media (max-width: 570px) {
   .form1 {
-    width: 500px;
+    max-width: 500px;
   }
 }
