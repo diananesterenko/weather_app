@@ -109,9 +109,8 @@ function showcelc() {
   let currentdegree = document.querySelector("#currentDegree");
   farinh.classList.remove("active");
   celciy.classList.add("active");
-  let tmp = ((currentdegree.innerHTML - 32) * 5) / 9;
-  tmp = Math.round(tmp);
-  currentdegree.innerHTML = tmp;
+
+  currentdegree.innerHTML = celciusTemp;
 }
 farinh.addEventListener("click", showfarenh);
 celciy.addEventListener("click", showcelc);
