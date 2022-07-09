@@ -227,3 +227,8 @@ hr {
     width: 90%;
   }
 }
+@media (max-width: 764px) {
+  .content {
+    width: 100%;
+  }
+}
