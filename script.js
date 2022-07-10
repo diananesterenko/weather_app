@@ -61,6 +61,15 @@ function showtemp(response) {
   currHumidity.innerHTML = `${humidity} %`;
   currSunrise.innerHTML = timeConverter(sunrise);
   currSunset.innerHTML = timeConverter(sunset);
+  if (
+    response.data.weather[0].icon === "01d" ||
+    response.data.weather[0].icon === "01n"
+  ) {
+    mainIcon.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967`
+    );
+  }
   mainIcon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
