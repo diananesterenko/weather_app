@@ -70,10 +70,24 @@ function showtemp(response) {
       `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967`
     );
   }
-  mainIcon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  if (
+    response.data.weather[0].icon === "02d" ||
+    response.data.weather[0].icon === "02n"
+  ) {
+    mainIcon.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/020/original/5.png?1657469871`
+    );
+  }
+  if (
+    response.data.weather[0].icon === "03d" ||
+    response.data.weather[0].icon === "03n"
+  ) {
+    mainIcon.setAttribute(
+      "src",
+      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/017/original/3.png?1657469842`
+    );
+  }
 }
 
 function showcity(event) {
