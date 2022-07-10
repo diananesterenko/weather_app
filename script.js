@@ -62,86 +62,115 @@ function showtemp(response) {
   currSunrise.innerHTML = timeConverter(sunrise);
   currSunset.innerHTML = timeConverter(sunset);
   mainIcon.setAttribute("alt", response.data.weather[0].description);
-  if (
-    response.data.weather[0].icon === "01d" ||
-    response.data.weather[0].icon === "01n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "02d" ||
-    response.data.weather[0].icon === "02n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/020/original/5.png?1657469871`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "03d" ||
-    response.data.weather[0].icon === "03n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/017/original/3.png?1657469842`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "04d" ||
-    response.data.weather[0].icon === "04n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/019/original/4.png?1657469863`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "09d" ||
-    response.data.weather[0].icon === "09n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/024/original/9.png?1657469899`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "10d" ||
-    response.data.weather[0].icon === "10n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/021/original/6.png?1657469878`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "11d" ||
-    response.data.weather[0].icon === "11n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/018/original/2.png?1657469850`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "13d" ||
-    response.data.weather[0].icon === "13n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/022/original/7.png?1657469884`
-    );
-  }
-  if (
-    response.data.weather[0].icon === "50d" ||
-    response.data.weather[0].icon === "50n"
-  ) {
-    mainIcon.setAttribute(
-      "src",
-      `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/023/original/8.png?1657469891`
-    );
+  switch (response.data.weather[0].icon) {
+    case "01d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967`
+      );
+      break;
+    case "01n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967`
+      );
+      break;
+    case "02d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/020/original/5.png?1657469871`
+      );
+      break;
+    case "02n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/020/original/5.png?1657469871`
+      );
+      break;
+    case "03d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/017/original/3.png?1657469842`
+      );
+      break;
+    case "03n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/017/original/3.png?1657469842`
+      );
+      break;
+    case "04d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/019/original/4.png?1657469863`
+      );
+      break;
+    case "04n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/019/original/4.png?1657469863`
+      );
+      break;
+    case "09d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/024/original/9.png?1657469899`
+      );
+      break;
+    case "09n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/024/original/9.png?1657469899`
+      );
+      break;
+    case "10d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/021/original/6.png?1657469878`
+      );
+      break;
+    case "10n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/021/original/6.png?1657469878`
+      );
+      break;
+    case "11d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/018/original/2.png?1657469850`
+      );
+      break;
+    case "11n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/018/original/2.png?1657469850`
+      );
+      break;
+    case "13d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/022/original/7.png?1657469884`
+      );
+      break;
+    case "13n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/022/original/7.png?1657469884`
+      );
+      break;
+    case "50d":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/023/original/8.png?1657469891`
+      );
+      break;
+    case "50n":
+      mainIcon.setAttribute(
+        "src",
+        `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/040/023/original/8.png?1657469891`
+      );
+      break;
   }
 }
 
