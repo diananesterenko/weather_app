@@ -21,6 +21,17 @@ if (minute < 10) {
   currenttime.innerHTML = `${hours}:${minute}`;
 }
 let form_input = document.querySelector("#forminput");
+function displayForecast() {
+  let forecastEl = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col1"> <p>${day}</p> <img src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967" alt="suncloud"><h2>25°</h2></div>`;
+  });
+}
 function timeConverter(UNIX_timestamp) {
   var a = new Date(UNIX_timestamp * 1000);
 
@@ -226,3 +237,4 @@ function showcelc() {
 }
 farinh.addEventListener("click", showfarenh);
 celciy.addEventListener("click", showcelc);
+displayForecast();
