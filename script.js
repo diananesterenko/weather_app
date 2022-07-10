@@ -61,6 +61,7 @@ function showtemp(response) {
   currHumidity.innerHTML = `${humidity} %`;
   currSunrise.innerHTML = timeConverter(sunrise);
   currSunset.innerHTML = timeConverter(sunset);
+  mainIcon.setAttribute("alt", response.data.weather[0].description);
   if (
     response.data.weather[0].icon === "01d" ||
     response.data.weather[0].icon === "01n"
