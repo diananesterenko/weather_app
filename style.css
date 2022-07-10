@@ -130,7 +130,7 @@ hr {
   color: rgb(41, 40, 40);
   height: 2px;
 }
-.weektemp {
+.weektemp .row {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -142,7 +142,7 @@ hr {
   border-radius: 16px;
   border: 2px solid #a3aab0;
 }
-.weektemp .col1 {
+.weektemp .col2 {
   box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.268);
   padding: 10px 0 0 0;
   border: 3px solid none;
@@ -151,9 +151,8 @@ hr {
   font-size: 18px;
   width: 14%;
 }
-.forecastmiddle {
-}
-.col1 img {
+
+.forecastmiddle img {
   margin: 15px 0 15px 0;
 
   width: 70%;

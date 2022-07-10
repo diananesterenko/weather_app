@@ -28,8 +28,8 @@ function displayForecast() {
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="col2"> <div class="forecastmiddle"> <p>${day}</p> <img src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967" alt="suncloud"><h2>25°</h2></div></div>`;
+      `<div class="col2"> <span class="forecastmiddle"> <p>${day}</p> <img src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967" alt="suncloud"><h2>25°</h2></span></div>`;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastEl.innerHTML = forecastHTML;
