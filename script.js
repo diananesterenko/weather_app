@@ -21,15 +21,27 @@ if (minute < 10) {
   currenttime.innerHTML = `${hours}:${minute}`;
 }
 let form_input = document.querySelector("#forminput");
-function displayForecast() {
+function formatDay(time) {
+  let date = new Date(time * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+function displayForecast(response) {
   let forecastEl = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col2"> <span class="forecastmiddle"> <p>${day}</p> <img src="
-https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967" alt="suncloud"><h2>25°</h2></span></div>`;
+  let days = response.data.daily;
+  days.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col2"> <span class="forecastmiddle"> <p>${formatDay(
+          day.dt
+        )}</p> <img src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967" alt="suncloud"><h2>${Math.round(
+          day.temp.day
+        )}°</h2></span></div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastEl.innerHTML = forecastHTML;
@@ -43,6 +55,11 @@ function timeConverter(UNIX_timestamp) {
   var time = hour + ":" + min;
 
   return time;
+}
+function getForecast(coordinates) {
+  let apiKey = "48c14604b04302ce48bd992c15188679";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 function showtemp(response) {
   let temp = Math.round(response.data.main.temp);
@@ -185,6 +202,7 @@ function showtemp(response) {
       );
       break;
   }
+  getForecast(response.data.coord);
 }
 
 function showcity(event) {
@@ -239,4 +257,3 @@ function showcelc() {
 }
 farinh.addEventListener("click", showfarenh);
 celciy.addEventListener("click", showcelc);
-displayForecast();
