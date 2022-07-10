@@ -31,6 +31,8 @@ function displayForecast() {
       `<div class="col1"> <p>${day}</p> <img src="
 https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/829/original/4bbff76d-be9d-44f1-824f-9f9a0a8c5435__6951FEE_.png?1657297967" alt="suncloud"><h2>25°</h2></div>`;
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastEl.innerHTML = forecastHTML;
 }
 function timeConverter(UNIX_timestamp) {
   var a = new Date(UNIX_timestamp * 1000);
